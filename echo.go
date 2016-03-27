@@ -15,6 +15,6 @@ import (
 func main() {
 	flag.Parse()
 	cs := C.CString(strings.Join(flag.Args(), " "))
+	defer C.free(unsafe.Pointer(cs))
 	C.echo(cs)
-	C.free(unsafe.Pointer(cs))
 }
