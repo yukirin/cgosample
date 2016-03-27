@@ -1,0 +1,2 @@
+# cgosample
+cgo sample
